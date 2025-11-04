@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 async function dbConnect(){
-    await mongoose.connect('mongodb+srv://sami:root@digitomize.lpqpv.mongodb.net/', {
+    await mongoose.connect(process.env.MONGODB_URL, {
         useNewUrlParser: true,
         // useUnifiedTopology: true
     })
